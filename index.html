@@ -1,13 +1,100 @@
-<!-- This is a simple HTML document -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>WDD 131</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Selassie Kwabla Heloo</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals. Selassie Kwabla Heloo's course homepage featuring web development projects, resources, and assignments.">
+    <meta name="author" content="Selassie Kwabla Heloo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>Welcome to WDD 131</h1>
-    <p>This is a simple paragraph.</p>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.linkedin.com" target="_blank" title="LinkedIn Profile">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank" title="BYU-Idaho Canvas">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
+                        title="Scriptures">Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Selassie Kwabla Heloo</h1>
+
+        <div class="cards-container">
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-body">
+                    <div class="bio-section">
+                        <div class="bio-text">
+                            <p>Hello! I am a student in the WDD 131 – Dynamic Web Fundamentals course. I am passionate
+                                about learning web development and building dynamic, responsive websites. I enjoy
+                                exploring new technologies and applying best practices in frontend development.</p>
+                            <p>When I am not coding, I enjoy spending time with family, reading, and exploring the
+                                outdoors. I am excited to grow my skills in HTML, CSS, and JavaScript throughout this
+                                course.</p>
+                        </div>
+                        <img src="images/profile.jpg" alt="Your Name profile photo" loading="lazy">
+                    </div>
+
+                    <div class="location-section">
+                        <h3>Accra, Ghana</h3>
+                        <div class="location-content">
+                            <figure>
+                                <img src="images/location.jpg" alt="Accra, Ghana" loading="lazy">
+                                <figcaption>Cape Coast, Ghana</figcaption>
+                            </figure>
+                            <div class="location-text">
+                                <p>Ghana, known as the "Gateway to Africa," is a vibrant West African nation rich in
+                                    history, culture, and natural beauty. Bordered by the Gulf of Guinea, it features
+                                    diverse landscapes ranging from tropical rainforests and savannah grasslands to
+                                    pristine beaches along its 560-kilometer coastline. Ghana was the first sub-Saharan
+                                    African country to gain independence from colonial rule in 1957, led by the
+                                    visionary Dr. Kwame Nkrumah.</p>
+                                <p>From the iconic Cape Coast and Elmina Castles to the bustling markets of Accra and
+                                    the serene waterfalls of the Volta Region, Ghana offers unforgettable experiences.
+                                    The country is celebrated for its warm hospitality, colorful Kente cloth, rhythmic
+                                    highlife music, and diverse cuisine featuring dishes like jollof rice, fufu, and
+                                    banku.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-body">
+                    <ul class="resource-list">
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://www.w3schools.com" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Selassie Kwabla Heloo, Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
