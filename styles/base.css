@@ -1,6 +1,3 @@
-/* ── Google Fonts Import ── */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
-
 /* ── CSS Custom Properties ── */
 :root {
     --primary: #1a5276;
@@ -279,7 +276,7 @@ footer p:first-child {
 
 #lastModified {
     font-size: 0.85rem;
-    color: var(--accent-light);
+    color: #f1c40f;
 }
 
 /* ── Responsive Adjustments ── */
