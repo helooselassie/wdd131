@@ -1,0 +1,29 @@
+/* Larger view - shown at 600px and up */
+
+@media screen and (min-width: 600px) {
+  /* hide hamburger button on larger screens */
+  #menu {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* horizontal flex navigation */
+  nav ul.navigation {
+    flex-direction: row;
+  }
+
+  .navigation a {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  /* responsive grid: as many columns as fit, min 300px each */
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
