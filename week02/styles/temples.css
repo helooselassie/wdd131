@@ -13,7 +13,9 @@ body {
   background-color: #f8f9fa;
 }
 
-h1, h2, figcaption {
+h1,
+h2,
+figcaption {
   font-family: 'Merriweather', serif;
 }
 
@@ -30,6 +32,10 @@ header {
 
 header h1 {
   font-size: 1.6rem;
+}
+
+nav {
+  display: flex;
 }
 
 nav ul.navigation {
