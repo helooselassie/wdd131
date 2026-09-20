@@ -1,0 +1,172 @@
+/* ===========================================================
+   Ghana — WDD 131 place page
+   Palette taken from the flag of Ghana: red, gold, green, black
+   =========================================================== */
+
+:root {
+    --flag-red: #ce1126;
+    --flag-gold: #fcd116;
+    --flag-green: #006b3f;
+    --ink: #1f1d1a;
+    --ink-soft: #46423c;
+    --paper: #f5f3ef;
+    --card: #ffffff;
+
+    --font-head: "Sora", "Trebuchet MS", sans-serif;
+    --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+
+    --space: 1rem;
+    --radius: 6px;
+    --shadow: 0 6px 18px rgba(31, 29, 26, 0.28);
+    --card-width: 21rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: var(--font-head);
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background-color: var(--flag-red);
+    border-bottom: 0.5rem solid var(--flag-green);
+    padding: 1.25rem var(--space);
+    text-align: center;
+}
+
+.site-header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Hero image ---------- */
+
+.hero img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* ---------- Cards (Data + Weather) ---------- */
+
+.card {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 1.5rem var(--space);
+    padding: 1.25rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.45rem 0.75rem;
+    justify-content: center;
+    margin: 0;
+}
+
+.card dt {
+    color: var(--ink);
+    font-weight: 600;
+    text-align: right;
+}
+
+.card dd {
+    color: var(--ink-soft);
+    margin: 0;
+    text-align: left;
+}
+
+.weather-icon {
+    display: block;
+    height: auto;
+    margin: 0 auto 1rem;
+    width: 5rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background-color: var(--flag-green);
+    border-top: 0.5rem solid var(--flag-gold);
+    color: #ffffff;
+    padding: 1.25rem var(--space);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.15rem 0;
+}
+
+/* ===========================================================
+   Wider view — image becomes a full-width backdrop and the
+   two cards sit on top of it, as shown in the wireframe.
+   =========================================================== */
+
+@media (min-width: 64em) {
+
+    .site-header h1 {
+        font-size: 2.75rem;
+    }
+
+    .place {
+        position: relative;
+    }
+
+    .hero img {
+        height: 38rem;
+        object-fit: cover;
+    }
+
+    .card {
+        margin: 0;
+        position: absolute;
+        width: var(--card-width);
+    }
+
+    .card--data {
+        left: 2rem;
+        top: 2rem;
+    }
+
+    .card--weather {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    /* The SVG icon belongs to the mobile view only */
+    .weather-icon {
+        display: none;
+    }
+
+    /* Emoticon shown only in the wider view, after the heading */
+    .card--weather h2::after {
+        content: " \26C5";
+        margin-left: 0.4rem;
+    }
+}

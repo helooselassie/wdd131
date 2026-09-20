@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ghana — Country Page | WDD 131</title>
+    <meta name="description"
+        content="A country page about Ghana with key facts, static weather data, and a calculated wind chill factor.">
+    <meta name="author" content="Selassie Kwabla Heloo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Ghana</h1>
+    </header>
+
+    <main class="place">
+        <picture class="hero">
+            <source srcset="images/ghana-hero-large.webp" media="(min-width: 64em)" width="1600" height="800">
+            <img src="images/ghana-hero-small.webp" srcset="images/ghana-hero-small.webp"
+                alt="Sunset over the Accra coastline with palm trees in silhouette" width="800" height="1000">
+        </picture>
+
+        <section class="card card--data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>238,535 sq km</dd>
+                <dt>Population:</dt>
+                <dd>34,427,414</dd>
+                <dt>Capital:</dt>
+                <dd>Accra</dd>
+                <dt>Languages:</dt>
+                <dd>English, Twi, Ewe</dd>
+                <dt>Currency:</dt>
+                <dd>Ghana Cedi</dd>
+                <dt>Time Zone:</dt>
+                <dd>UTC+0</dd>
+                <dt>Calling Code:</dt>
+                <dd>+233</dd>
+                <dt>Internet TLD:</dt>
+                <dd>.gh</dd>
+            </dl>
+        </section>
+
+        <section class="card card--weather">
+            <h2>Weather</h2>
+            <img class="weather-icon" src="images/partly-cloudy.svg" alt="" width="96" height="96">
+            <dl>
+                <dt>Temperature:</dt>
+                <dd>29 &deg;C</dd>
+                <dt>Conditions:</dt>
+                <dd>Partly Cloudy</dd>
+                <dt>Wind:</dt>
+                <dd>12 km/h</dd>
+                <dt>Wind Chill:</dt>
+                <dd id="windchill">N/A</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy;<span id="currentyear"></span> &#127462;&#127469; Selassie Kwabla Heloo &#127462;&#127469; Ghana</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

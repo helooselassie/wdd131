@@ -1,0 +1,109 @@
+/* CSS Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    /* Dark gray — high contrast on white */
+    background-color: #ffffff;
+    padding-bottom: 2rem;
+}
+
+/* Announcement Banner (replaces marquee) */
+.announcement-banner {
+    background-color: #004d40;
+    /* Dark teal */
+    color: #ffffff;
+    /* White text — 7.5:1 contrast ratio */
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: #f5f5f5;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #004d40;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    /* 16:1 contrast on #f5f5f5 */
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #004d40;
+    /* Teal — 4.6:1 on white (WCAG AA) */
+}
+
+/* Article */
+article p {
+    margin-bottom: 1rem;
+}
+
+/* List */
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    /* Replaces <br><br> */
+}
+
+/* Callout — Fixed Contrast */
+.callout {
+    background-color: #fff3cd;
+    /* Light yellow */
+    border-left: 5px solid #856404;
+    padding: 1.25rem;
+    margin: 2rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.callout h3 {
+    color: #856404;
+    /* Dark amber — 4.5:1 on #fff3cd */
+    margin-top: 0;
+}
+
+.callout p {
+    color: #533f03;
+    /* Very dark brown — 7:1 on #fff3cd */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* White on black — 16:1 */
+    margin-top: 3rem;
+}

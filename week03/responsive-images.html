@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Images | WDD 131</title>
+    <meta name="description" content="Week 03 activity using the picture element to swap art-directed WebP images.">
+    <meta name="author" content="Selassie Kwabla Heloo">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+
+<body>
+    <main>
+        <h1>Responsive Images</h1>
+
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="A temple with a tall central tower and spire, framed by trees"
+                    width="1500" height="750">
+            </picture>
+        </div>
+
+        <p>Resize the browser window to see the image swap. Below 500px the tightly cropped spire loads, between 500px
+            and 1000px a mid-range crop of the building loads, and at 1000px and wider the full grounds are shown.</p>
+    </main>
+</body>
+
+</html>
