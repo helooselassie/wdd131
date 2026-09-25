@@ -1,0 +1,233 @@
+/* ---------- Base & Reset ---------- */
+:root {
+    --color-bg: #f5f3ee;
+    --color-surface: #ffffff;
+    --color-primary: #2f4550;
+    --color-accent: #b08d57;
+    --color-text: #2b2b2b;
+    --color-muted: #6b6b6b;
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.18);
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Header & Nav ---------- */
+.site-header {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-inner h1 {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.main-nav {
+    width: 100%;
+    display: none;
+}
+
+.main-nav.open {
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.filter-btn.active {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+    max-width: 1100px;
+    margin: 1.5rem auto 0;
+    padding: 0 1.25rem;
+    text-align: center;
+}
+
+.intro h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.intro p {
+    color: var(--color-muted);
+    margin: 0;
+}
+
+/* ---------- Temple Gallery / Cards ---------- */
+.temple-gallery {
+    max-width: 1100px;
+    margin: 1.5rem auto 2.5rem;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.temple-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.temple-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.temple-card-body {
+    padding: 1rem 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.temple-card-body h3 {
+    margin: 0 0 0.2rem;
+    color: var(--color-primary);
+    font-size: 1.15rem;
+}
+
+.temple-card-body p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+}
+
+.temple-card-body .label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.85rem;
+}
+
+.site-footer p {
+    margin: 0.2rem 0;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+@media screen and (min-width: 600px) {
+    .temple-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .main-nav ul {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

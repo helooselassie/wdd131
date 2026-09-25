@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temple Album | Filtered</title>
+    <meta name="description"
+        content="A filterable picture album of temples, built with dynamic JavaScript rendering, native lazy loading, and responsive design for WDD 131." />
+    <link rel="stylesheet" href="styles/temple.css" />
+    <script src="scripts/temple.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Temple Picture Album</h1>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><button class="filter-btn active" data-filter="home">Home</button></li>
+                    <li><button class="filter-btn" data-filter="old">Old</button></li>
+                    <li><button class="filter-btn" data-filter="new">New</button></li>
+                    <li><button class="filter-btn" data-filter="large">Large</button></li>
+                    <li><button class="filter-btn" data-filter="small">Small</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Explore the Temples</h2>
+            <p>Use the menu above to filter temples by age or size, or view the full collection below.</p>
+        </section>
+
+        <section class="temple-gallery" id="templeGallery" aria-live="polite">
+            <!-- Temple cards are generated dynamically by JavaScript -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Selassie Kwabla Heloo | WDD 131</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
