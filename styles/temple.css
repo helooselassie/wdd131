@@ -94,12 +94,14 @@ h2 {
 }
 
 .filter-btn {
-    background-color: transparent;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0);
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: var(--radius);
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }

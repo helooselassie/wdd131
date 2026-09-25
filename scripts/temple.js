@@ -146,7 +146,8 @@ function filterTemples(filter) {
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
         filterButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
         renderTemples(filterTemples(button.dataset.filter));
