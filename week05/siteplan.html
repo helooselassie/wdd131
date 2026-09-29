@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for Accra Live, a local music event calendar for Accra, Ghana.">
+    <title>Accra Live — Site Plan</title>
+    <style>
+        /* Site plan styles — uses the project's own color schema (see Color Schema section) */
+        :root {
+            --bg: #0f1220;
+            /* deep midnight blue: page background */
+            --surface: #181c2e;
+            /* card/panel background */
+            --text: #f4f1ea;
+            /* warm off-white: body text */
+            --muted: #a8a4b5;
+            /* soft gray-lavender: secondary text */
+            --gold: #f0b429;
+            /* Ghana gold: headings, accents, buttons */
+            --green: #2bb673;
+            /* green: success states, "Picked for you" badge */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--surface);
+            border-bottom: 3px solid var(--gold);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--gold);
+            margin: 0 0 0.25rem;
+        }
+
+        header p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        section {
+            background: var(--surface);
+            border: 1px solid #262b44;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        h2 {
+            color: var(--gold);
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--text);
+        }
+
+        /* Color swatches */
+        .swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .swatches li {
+            flex: 1 1 140px;
+        }
+
+        .swatch {
+            display: block;
+            height: 64px;
+            border-radius: 8px;
+            border: 1px solid #3a4166;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Wireframes */
+        .wireframes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .wireframe {
+            border: 2px dashed var(--gold);
+            border-radius: 10px;
+            padding: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .wireframe figcaption {
+            color: var(--gold);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .wf-box {
+            background: #232842;
+            border: 1px solid #3a4166;
+            border-radius: 6px;
+            padding: 0.75rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .wf-hero {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wf-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .wf-row .wf-box {
+            flex: 1;
+        }
+
+        .wf-tall {
+            min-height: 140px;
+        }
+
+        @media (min-width: 700px) {
+            .wireframes {
+                grid-template-columns: 280px 1fr;
+            }
+
+            .wireframe figcaption {
+                grid-column: 1 / -1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Accra Live — Site Plan</h1>
+        <p>WDD 131 Project Planning Document &middot; Last updated September 2026</p>
+    </header>
+
+    <main>
+
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>Accra Live</strong> — optional domain: <em>accralive.com</em></p>
+            <p>This name represents a calendar of live music events happening in Accra,
+                Ghana. "Accra" anchors the site to its city and "Live" signals both live
+                music and an up-to-date, living calendar. The logo pairs the word
+                <strong>Accra</strong> in off-white with <strong>Live</strong> in gold to
+                echo the Ghana flag palette.
+            </p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>Accra's music scene is spread across dozens of venue social media pages,
+                making shows hard to track. Accra Live provides one consolidated calendar
+                for live Highlife, Afrobeats, Jazz, Gospel, Reggae, and Hip-Hop events in
+                the city. The site offers:</p>
+            <ul>
+                <li>A home page with a hero, the three soonest shows ("Next Up"), and an
+                    event-alert signup form.</li>
+                <li>A filterable events page (by genre and venue) listing every show.</li>
+                <li>A venues page profiling Accra's key live-music rooms with capacity,
+                    address, and genres.</li>
+                <li>Personalization: saved genre preferences surface matching events first
+                    with a "Picked for you" badge.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <ul>
+                <li>What live music shows are happening in Accra this weekend, and how much
+                    do tickets cost?</li>
+                <li>Where in Osu can I see a highlife or jazz band play, and how big is the
+                    venue?</li>
+                <li>Can I get notified by email when a Reggae or Gospel show is added to the
+                    calendar?</li>
+                <li>Which upcoming events match the genres I selected when I signed up for
+                    alerts?</li>
+            </ul>
+        </section>
+
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>Palette inspired by Ghana's flag (red, gold, green) balanced against a deep
+                midnight blue so the gold accents feel warm and musical at night.</p>
+            <ul class="swatches">
+                <li>
+                    <span class="swatch" style="background:#0f1220;"></span>
+                    <strong>#0f1220</strong> — Midnight blue. Page background and footer.
+                </li>
+                <li>
+                    <span class="swatch" style="background:#181c2e;"></span>
+                    <strong>#181c2e</strong> — Panel navy. Cards, header band, section panels.
+                </li>
+                <li>
+                    <span class="swatch" style="background:#f4f1ea;"></span>
+                    <strong>#f4f1ea</strong> — Warm off-white. Headings and body text on dark
+                    backgrounds.
+                </li>
+                <li>
+                    <span class="swatch" style="background:#f0b429;"></span>
+                    <strong>#f0b429</strong> — Ghana gold. Headings on this plan, logo accent,
+                    primary buttons, prices, nav active state.
+                </li>
+                <li>
+                    <span class="swatch" style="background:#2bb673;"></span>
+                    <strong>#2bb673</strong> — Green. Success messages, form confirmation,
+                    "Picked for you" badge.
+                </li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>One typeface is used throughout for consistency and fast loading:</p>
+            <ul>
+                <li><strong>"Segoe UI", system-ui, -apple-system, sans-serif</strong> — used
+                    for all headings, body text, navigation, form labels, and buttons. The
+                    system-font stack avoids a web-font download and renders crisply on
+                    every device.</li>
+            </ul>
+            <p style="color: var(--muted);">You are reading the body style right now; the
+                section headings above show the heading style.</p>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>Home page layout, mobile and desktop views (content shown as blocks, not
+                final copy).</p>
+
+            <div class="wireframes">
+                <!-- Mobile wireframe -->
+                <figure class="wireframe">
+                    <figcaption>Mobile (portrait)</figcaption>
+                    <div class="wf-box">Logo + nav links (wrap)</div>
+                    <div class="wf-box wf-hero">Hero image + headline + CTA button</div>
+                    <div class="wf-box">"Next Up" heading</div>
+                    <div class="wf-box">Event card 1</div>
+                    <div class="wf-box">Event card 2</div>
+                    <div class="wf-box">Event card 3</div>
+                    <div class="wf-box wf-tall">Alert form: name, email, genre checkboxes, submit</div>
+                    <div class="wf-box">Footer: copyright + plan/reference links</div>
+                </figure>
+
+                <!-- Desktop wireframe -->
+                <figure class="wireframe">
+                    <figcaption>Desktop (wide)</figcaption>
+                    <div class="wf-box">Logo (left) + nav links (right)</div>
+                    <div class="wf-box wf-hero">Full-width hero image with overlay text + CTA</div>
+                    <div class="wf-box">"Next Up" heading + intro line</div>
+                    <div class="wf-row">
+                        <div class="wf-box wf-tall">Event card 1</div>
+                        <div class="wf-box wf-tall">Event card 2</div>
+                        <div class="wf-box wf-tall">Event card 3</div>
+                    </div>
+                    <div class="wf-box wf-tall">Alert form, centered in a narrow column</div>
+                    <div class="wf-box">Footer: copyright (left) + links (right)</div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="testing">
+            <h2>Testing Plan</h2>
+            <ul>
+                <li>Validate HTML and CSS with the W3C validators; fix all errors.</li>
+                <li>Check the DevTools console for JavaScript runtime errors on every page.</li>
+                <li>Run Lighthouse (mobile + desktop) for Performance, Accessibility, Best
+                    Practices, and SEO; address flagged contrast and alt-text issues.</li>
+                <li>Verify color contrast for gold/green text on the midnight background
+                    using DevTools CSS Overview.</li>
+                <li>Test the form: empty name, bad email, no genres checked, and a valid
+                    submission; confirm preferences persist across page loads and the
+                    "Clear preferences" button resets the events page.</li>
+                <li>Test responsive behavior at mobile portrait, mobile landscape, tablet,
+                    and desktop widths.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Accra Live Site Plan — WDD 131</p>
+    </footer>
+
+</body>
+
+</html>
