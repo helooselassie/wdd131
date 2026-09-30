@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Product Review Form</title>
+  <meta name="description"
+    content="Rate a product, choose the features you found useful, and share your written review using this product review form.">
+  <meta name="author" content="Selassie Kwabla Heloo">
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
-  <header><h1>Product Review</h1></header>
+  <header>
+    <h1>Product Review</h1>
+  </header>
   <main>
     <form action="review.html" method="get">
       <div class="field">
@@ -23,13 +30,13 @@
         <div class="stars">
           <input type="radio" id="star5" name="rating" value="5" required>
           <label for="star5" title="5 stars"><span class="sr-only">5 stars</span>&starf;</label>
-          <input type="radio" id="star4" name="rating" value="4">
+          <input type="radio" id="star4" name="rating" value="4" required>
           <label for="star4" title="4 stars"><span class="sr-only">4 stars</span>&starf;</label>
-          <input type="radio" id="star3" name="rating" value="3">
+          <input type="radio" id="star3" name="rating" value="3" required>
           <label for="star3" title="3 stars"><span class="sr-only">3 stars</span>&starf;</label>
-          <input type="radio" id="star2" name="rating" value="2">
+          <input type="radio" id="star2" name="rating" value="2" required>
           <label for="star2" title="2 stars"><span class="sr-only">2 stars</span>&starf;</label>
-          <input type="radio" id="star1" name="rating" value="1">
+          <input type="radio" id="star1" name="rating" value="1" required>
           <label for="star1" title="1 star"><span class="sr-only">1 star</span>&starf;</label>
         </div>
       </fieldset>
@@ -41,10 +48,14 @@
 
       <fieldset class="field">
         <legend>Useful Features</legend>
-        <div class="check"><input type="checkbox" id="feat1" name="features" value="Durability"><label for="feat1">Durability</label></div>
-        <div class="check"><input type="checkbox" id="feat2" name="features" value="Ease of use"><label for="feat2">Ease of use</label></div>
-        <div class="check"><input type="checkbox" id="feat3" name="features" value="Performance"><label for="feat3">Performance</label></div>
-        <div class="check"><input type="checkbox" id="feat4" name="features" value="Design"><label for="feat4">Design</label></div>
+        <div class="check"><input type="checkbox" id="feat1" name="features" value="Durability"><label
+            for="feat1">Durability</label></div>
+        <div class="check"><input type="checkbox" id="feat2" name="features" value="Ease of use"><label for="feat2">Ease
+            of use</label></div>
+        <div class="check"><input type="checkbox" id="feat3" name="features" value="Performance"><label
+            for="feat3">Performance</label></div>
+        <div class="check"><input type="checkbox" id="feat4" name="features" value="Design"><label
+            for="feat4">Design</label></div>
       </fieldset>
 
       <div class="field">
@@ -65,4 +76,5 @@
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
+
 </html>
