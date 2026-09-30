@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header><h1>Product Review</h1></header>
+  <main>
+    <form action="review.html" method="get">
+      <div class="field">
+        <label for="productName">Product Name</label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <fieldset class="field rating">
+        <legend>Overall Rating</legend>
+        <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5" title="5 stars"><span class="sr-only">5 stars</span>&starf;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" title="4 stars"><span class="sr-only">4 stars</span>&starf;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" title="3 stars"><span class="sr-only">3 stars</span>&starf;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" title="2 stars"><span class="sr-only">2 stars</span>&starf;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" title="1 star"><span class="sr-only">1 star</span>&starf;</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" name="installDate" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Useful Features</legend>
+        <div class="check"><input type="checkbox" id="feat1" name="features" value="Durability"><label for="feat1">Durability</label></div>
+        <div class="check"><input type="checkbox" id="feat2" name="features" value="Ease of use"><label for="feat2">Ease of use</label></div>
+        <div class="check"><input type="checkbox" id="feat3" name="features" value="Performance"><label for="feat3">Performance</label></div>
+        <div class="check"><input type="checkbox" id="feat4" name="features" value="Design"><label for="feat4">Design</label></div>
+      </fieldset>
+
+      <div class="field">
+        <label for="review">Written Review <span class="opt">(optional)</span></label>
+        <textarea id="review" name="review" rows="5"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="userName">Your Name <span class="opt">(optional)</span></label>
+        <input type="text" id="userName" name="userName" autocomplete="name">
+      </div>
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Selassie Kwabla Heloo | Ghana</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

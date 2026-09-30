@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Accra Live — one calendar for every live music event in Accra, Ghana. Highlife, Afrobeats, Jazz, Gospel, Reggae and Hip-Hop.">
+    <title>Accra Live — Local Music Event Calendar</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="home">
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="nav-logo" href="index.html">🎵 Accra<span>Live</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="venues.html">Venues</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <p class="hero-kicker">Accra, Ghana · Live Music</p>
+                <h1>Every Accra gig.<br>One calendar.</h1>
+                <p class="hero-sub">Highlife legends, Afrobeats block parties, Sunday jazz, gospel choirs, reggae on the
+                    beach and hip-hop cyphers — tracked so you never miss a show.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="events.html">Browse all events</a>
+                    <a class="btn btn-ghost" href="#alerts">Get alerts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalization -->
+        <section class="container" id="personalized" hidden>
+            <div class="personalized-bar">
+                <div>
+                    <h2 id="greeting"></h2>
+                    <p class="muted">Based on your favourite genres, we put these first:</p>
+                </div>
+                <button class="btn btn-small btn-outline" id="clear-prefs" type="button">Clear preferences</button>
+            </div>
+            <div class="card-grid" id="picked-grid"></div>
+        </section>
+
+        <!-- Next Up -->
+        <section class="container section">
+            <div class="section-head">
+                <h2>Next Up in Accra</h2>
+                <a class="link-more" href="events.html">See all events →</a>
+            </div>
+            <div class="card-grid" id="next-up"></div>
+        </section>
+
+        <!-- Alert form -->
+        <section class="section section-alt" id="alerts">
+            <div class="container form-wrap">
+                <h2>Get Event Alerts</h2>
+                <p class="muted">Tell us your favourite genres and we'll flag matching shows first whenever you visit.
+                </p>
+                <form id="alert-form" novalidate>
+                    <div class="field">
+                        <label for="alert-name">Your name</label>
+                        <input type="text" id="alert-name" name="name" placeholder="e.g. Ama Serwaa" required>
+                        <span class="error" id="error-name" role="alert"></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="alert-email">Email address</label>
+                        <input type="email" id="alert-email" name="email" placeholder="you@example.com" required>
+                        <span class="error" id="error-email" role="alert"></span>
+                    </div>
+
+                    <fieldset class="field">
+                        <legend>Preferred genres <span class="muted">(pick at least one)</span></legend>
+                        <div class="checkbox-row" id="genre-checkboxes"><!-- checkboxes injected by js/alerts.js -->
+                        </div>
+                        <span class="error" id="error-genres" role="alert"></span>
+                    </fieldset>
+
+                    <button class="btn btn-primary" type="submit">Sign me up</button>
+                    <p class="form-success" id="form-success" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>🎵 AccraLive — built for the Accra music scene.</p>
+            <p class="muted">Sample data for a WDD learning activity · Runs fully in your browser.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/alerts.js"></script>
+</body>
+
+</html>

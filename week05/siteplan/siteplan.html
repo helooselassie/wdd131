@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accra Live Calendar | Site Plan</title>
+  <meta name="description" content="Website planning document for the Accra Live Calendar project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>Accra Live Calendar</h1>
+    <p>Website Planning Document &middot; WDD 131 Final Project</p>
+  </header>
+
+  <main>
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>Accra Live Calendar</strong></p>
+      <p>The name says exactly what the site is: a calendar of live music in Accra. It is short, easy to remember, and uses words people already type into a search box when they want something to do tonight.</p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <ul>
+        <li>Show upcoming live music events in Accra in one place, with date, venue, genre and ticket price.</li>
+        <li>Let visitors filter events by genre and venue so they find a show that fits their taste quickly.</li>
+        <li>Introduce local venues with their location and the kinds of events they host.</li>
+        <li>Offer a &ldquo;Get Event Alerts&rdquo; sign-up form so fans hear about new shows.</li>
+        <li>Remember each visitor's favourite events on their own device using localStorage.</li>
+      </ul>
+    </section>
+
+    <section id="audience">
+      <h2>Target Audience</h2>
+      <p>Music fans aged 18 to 40 living in or visiting Accra, mostly browsing on a phone. Secondary audiences are local bands looking for exposure and venue managers who want to promote their events.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <ol>
+        <li>A student wants to find a free or low-cost highlife show this weekend. Can they filter by genre and see the price without opening several pages?</li>
+        <li>A tourist has just landed in Accra and wants to know which venue near Osu has live music tonight. Can they find the venue, its location and the event time in under a minute?</li>
+        <li>A regular concert-goer wants a reminder when an afrobeats artist plays again. Is the alert sign-up form short, clear and confirmed right after submitting?</li>
+        <li>A venue manager wants to check how their events appear to fans. Is the venue page clear about what is on and how to get there?</li>
+      </ol>
+    </section>
+
+    <section id="color-scheme">
+      <h2>Color Scheme</h2>
+      <p>The palette takes its cues from the Ghanaian flag and stage lighting: a dark night background, warm gold highlights and a red accent for actions.</p>
+      <table>
+        <thead>
+          <tr><th scope="col">Swatch</th><th scope="col">Name</th><th scope="col">Hex</th><th scope="col">Where it is used</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="swatch swatch-indigo"></span></td><td>Night Indigo</td><td>#1B1A3B</td><td>Header, footer, main headings and body text</td></tr>
+          <tr><td><span class="swatch swatch-gold"></span></td><td>Kente Gold</td><td>#E9A820</td><td>Highlights, active filter buttons, borders and links on dark backgrounds</td></tr>
+          <tr><td><span class="swatch swatch-red"></span></td><td>Stage Red</td><td>#C8102E</td><td>Buttons such as &ldquo;Get Event Alerts&rdquo; and &ldquo;Save event&rdquo;</td></tr>
+          <tr><td><span class="swatch swatch-paper"></span></td><td>Paper</td><td>#FAF6EE</td><td>Page background and text on dark backgrounds</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Bricolage Grotesque</strong> (bold, sans-serif fallback): site name, page headings and event titles.</li>
+        <li><strong>Nunito Sans</strong> (regular and bold, sans-serif fallback): body text, event details, navigation, form labels and buttons.</li>
+      </ul>
+    </section>
+
+    <section id="structure">
+      <h2>Site Structure</h2>
+      <p>Files and folders use lowercase letters, no spaces, and hyphens only where needed.</p>
+      <pre>wdd131/
+  project/
+    index.html        (home: featured events, genre filter)
+    venues.html       (venue list and details)
+    alerts.html       (Get Event Alerts form)
+    confirmation.html (form confirmation message)
+    styles/
+      main.css
+    scripts/
+      events.js
+      alerts.js
+    images/
+      hero-mobile.webp
+      hero-large.webp
+      logo.svg</pre>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <p>Both wireframes show the home page.</p>
+      <div class="wireframes">
+        <figure>
+          <img src="images/wireframe-mobile.svg" width="360" height="640" alt="Mobile wireframe of the home page: header with menu button, hero banner, genre filter buttons, stacked event cards and footer.">
+          <figcaption>Mobile view (under 700px): single column, menu button, stacked event cards.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/wireframe-desktop.svg" width="960" height="600" alt="Large-screen wireframe of the home page: header with horizontal navigation, hero banner, genre filter row, three-column event card grid and footer.">
+          <figcaption>Large view (700px and up): horizontal navigation, three-column event grid.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Selassie Kwabla Heloo &middot; WDD 131</p>
+  </footer>
+</body>
+</html>

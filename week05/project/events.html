@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All upcoming live music events in Accra, Ghana. Filter by genre and venue.">
+    <title>All Events — Accra Live</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body data-page="events">
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="nav-logo" href="index.html">🎵 Accra<span>Live</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" aria-current="page">Events</a></li>
+                <li><a href="venues.html">Venues</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container section">
+            <h1>All Events</h1>
+            <p class="muted">Filter by genre, venue, or both.</p>
+
+            <form class="filters" id="filters" aria-label="Event filters">
+                <div class="field">
+                    <label for="filter-genre">Genre</label>
+                    <select id="filter-genre" name="genre">
+                        <option value="all">All genres</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-venue">Venue</label>
+                    <select id="filter-venue" name="venue">
+                        <option value="all">All venues</option>
+                    </select>
+                </div>
+                <button class="btn btn-small btn-outline" type="reset" id="filter-reset">Reset</button>
+            </form>
+
+            <p class="muted" id="result-count" aria-live="polite"></p>
+            <div class="card-grid" id="events-list"></div>
+            <p class="no-match" id="no-match" hidden>😕 No events match those filters. Try a different combination or
+                <button class="link-btn" type="button" id="no-match-reset">reset the filters</button>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>🎵 AccraLive — built for the Accra music scene.</p>
+            <p class="muted">Sample data for a WDD learning activity · Runs fully in your browser.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/events.js"></script>
+</body>
+
+</html>
