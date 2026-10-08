@@ -5,166 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site plan for Accra Live, a local music event calendar for Accra, Ghana.">
+    <meta name="author" content="Selassie Kwabla Heloo">
     <title>Accra Live — Site Plan</title>
-    <style>
-        /* Site plan styles — uses the project's own color schema (see Color Schema section) */
-        :root {
-            --bg: #0f1220;
-            /* deep midnight blue: page background */
-            --surface: #181c2e;
-            /* card/panel background */
-            --text: #f4f1ea;
-            /* warm off-white: body text */
-            --muted: #a8a4b5;
-            /* soft gray-lavender: secondary text */
-            --gold: #f0b429;
-            /* Ghana gold: headings, accents, buttons */
-            --green: #2bb673;
-            /* green: success states, "Picked for you" badge */
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background: var(--surface);
-            border-bottom: 3px solid var(--gold);
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            color: var(--gold);
-            margin: 0 0 0.25rem;
-        }
-
-        header p {
-            color: var(--muted);
-            margin: 0;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 1.5rem 1rem 3rem;
-        }
-
-        section {
-            background: var(--surface);
-            border: 1px solid #262b44;
-            border-radius: 12px;
-            padding: 1.25rem 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        h2 {
-            color: var(--gold);
-            margin-top: 0;
-        }
-
-        h3 {
-            color: var(--text);
-        }
-
-        /* Color swatches */
-        .swatches {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            list-style: none;
-            padding: 0;
-        }
-
-        .swatches li {
-            flex: 1 1 140px;
-        }
-
-        .swatch {
-            display: block;
-            height: 64px;
-            border-radius: 8px;
-            border: 1px solid #3a4166;
-            margin-bottom: 0.4rem;
-        }
-
-        /* Wireframes */
-        .wireframes {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .wireframe {
-            border: 2px dashed var(--gold);
-            border-radius: 10px;
-            padding: 0.75rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .wireframe figcaption {
-            color: var(--gold);
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .wf-box {
-            background: #232842;
-            border: 1px solid #3a4166;
-            border-radius: 6px;
-            padding: 0.75rem;
-            text-align: center;
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
-
-        .wf-hero {
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .wf-row {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .wf-row .wf-box {
-            flex: 1;
-        }
-
-        .wf-tall {
-            min-height: 140px;
-        }
-
-        @media (min-width: 700px) {
-            .wireframes {
-                grid-template-columns: 280px 1fr;
-            }
-
-            .wireframe figcaption {
-                grid-column: 1 / -1;
-            }
-        }
-
-        footer {
-            text-align: center;
-            color: var(--muted);
-            padding: 1.5rem;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/siteplan.css">
 </head>
 
 <body>
@@ -224,25 +67,25 @@
                 midnight blue so the gold accents feel warm and musical at night.</p>
             <ul class="swatches">
                 <li>
-                    <span class="swatch" style="background:#0f1220;"></span>
+                    <span class="swatch swatch-midnight"></span>
                     <strong>#0f1220</strong> — Midnight blue. Page background and footer.
                 </li>
                 <li>
-                    <span class="swatch" style="background:#181c2e;"></span>
+                    <span class="swatch swatch-panel"></span>
                     <strong>#181c2e</strong> — Panel navy. Cards, header band, section panels.
                 </li>
                 <li>
-                    <span class="swatch" style="background:#f4f1ea;"></span>
+                    <span class="swatch swatch-offwhite"></span>
                     <strong>#f4f1ea</strong> — Warm off-white. Headings and body text on dark
                     backgrounds.
                 </li>
                 <li>
-                    <span class="swatch" style="background:#f0b429;"></span>
+                    <span class="swatch swatch-gold"></span>
                     <strong>#f0b429</strong> — Ghana gold. Headings on this plan, logo accent,
                     primary buttons, prices, nav active state.
                 </li>
                 <li>
-                    <span class="swatch" style="background:#2bb673;"></span>
+                    <span class="swatch swatch-green"></span>
                     <strong>#2bb673</strong> — Green. Success messages, form confirmation,
                     "Picked for you" badge.
                 </li>
@@ -258,7 +101,7 @@
                     system-font stack avoids a web-font download and renders crisply on
                     every device.</li>
             </ul>
-            <p style="color: var(--muted);">You are reading the body style right now; the
+            <p class="muted-note">You are reading the body style right now; the
                 section headings above show the heading style.</p>
         </section>
 
