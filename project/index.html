@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Accra Groove Guide is a responsive calendar for live Highlife, Afrobeats, Jazz, Gospel, Reggae, and Hip-Hop events in Accra, Ghana.">
+    <title>Accra Groove Guide | Live Music Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23be1a4f'/%3E%3Ctext x='50' y='70' font-size='64' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="./index.html" aria-label="Accra Groove Guide home">
+                <span class="brand-mark" aria-hidden="true">♪</span>
+                <span>Accra Groove Guide</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span class="sr-only">Toggle navigation menu</span>
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a class="active" href="./index.html" aria-current="page">Home</a>
+                <a href="./events.html">Events</a>
+                <a href="./venues.html">Venues</a>
+                <a href="./references.html">References</a>
+                <a class="nav-cta" href="./index.html#alerts">Get alerts</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <h1 id="hero-title" class="grad">Live Sounds Without Borders</h1>
+                <p class="hero-lede">
+                    Explore Highlife, Afrobeats, Jazz, Gospel, Reggae, and Hip-Hop nights
+                    at Accra's best stages, rooftops, and beachfronts. Pick a genre, find the night, show up.
+                </p>
+                <ul class="hero-stats" aria-label="Guide highlights">
+                    <li><strong>12</strong> events</li>
+                    <li><strong>8</strong> venues</li>
+                    <li><strong>6</strong> genres</li>
+                </ul>
+                <a class="button button-primary" href="./events.html">Browse events</a>
+            </div>
+
+            <div class="hero-stage">
+                <div class="hero-visual" role="img"
+                    aria-label="Abstract illustration of a musician performing beneath glowing Accra city lights">
+                    <svg viewBox="0 0 620 640" aria-hidden="true" focusable="false">
+                        <defs>
+                            <radialGradient id="stageGlow" cx="50%" cy="32%" r="72%">
+                                <stop offset="0%" stop-color="#a23bd6" stop-opacity=".95" />
+                                <stop offset="44%" stop-color="#2a1450" />
+                                <stop offset="100%" stop-color="#10141f" />
+                            </radialGradient>
+
+                            <linearGradient id="stageFloor" x1="0" x2="1" y1="0" y2="1">
+                                <stop offset="0%" stop-color="#ff4d8d" />
+                                <stop offset="100%" stop-color="#a23bd6" />
+                            </linearGradient>
+                        </defs>
+
+                        <rect width="620" height="640" fill="url(#stageGlow)" />
+                        <circle cx="455" cy="170" r="150" fill="none" stroke="#ff4d8d" stroke-width="4" opacity=".85" />
+                        <circle cx="455" cy="170" r="96" fill="none" stroke="#f4efe6" stroke-width="2" opacity=".45" />
+                        <circle cx="455" cy="170" r="16" fill="#ff4d8d" />
+
+                        <path d="M47 448 C120 350 205 510 276 414 S428 466 510 344 S610 410 642 328" fill="none"
+                            stroke="url(#stageFloor)" stroke-width="8" stroke-linecap="round" />
+
+                        <g fill="#050505" opacity=".95">
+                            <ellipse cx="306" cy="490" rx="160" ry="28" />
+                            <circle cx="306" cy="245" r="50" />
+                            <path d="M257 301c29-26 72-27 100-1l44 157H213z" />
+                            <path d="M331 284l130-72 19 28-127 91z" />
+                            <path d="M431 193l83-48 18 31-78 58z" />
+                            <rect x="493" y="130" width="82" height="14" rx="7" transform="rotate(31 493 130)" />
+                        </g>
+
+                        <g stroke="#ff4d8d" stroke-width="4" stroke-linecap="round">
+                            <path d="M93 545v-28" />
+                            <path d="M117 545v-48" />
+                            <path d="M141 545v-22" />
+                            <path d="M165 545v-58" />
+                            <path d="M189 545v-35" />
+                            <path d="M213 545v-70" />
+                        </g>
+
+                        <text x="70" y="120" fill="#f4efe6" font-size="90"
+                            font-family="Impact, Arial, sans-serif">♪</text>
+                        <text x="135" y="205" fill="#ff4d8d" font-size="54"
+                            font-family="Impact, Arial, sans-serif">♫</text>
+                    </svg>
+                </div>
+
+                <aside class="now-card" aria-label="Featured event">
+                    <span>Featured sound</span>
+                    <strong>Highlife Heritage Night</strong>
+                    <p>National Theatre of Ghana</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section centered" aria-labelledby="next-up-title">
+            <h2 id="next-up-title" class="grad">Next Up in Accra</h2>
+            <p class="section-lede">The three soonest nights on the calendar. Add your genres below and your picks move to the front.</p>
+
+            <div class="preference-panel" id="preference-panel" hidden>
+                <div>
+                    <p class="greeting" id="greeting"></p>
+                    <p class="muted">Events matching your preferred genres appear first.</p>
+                </div>
+                <button class="button button-ghost" id="clear-preferences" type="button">
+                    Clear preferences
+                </button>
+            </div>
+
+            <div class="card-grid featured-grid" id="next-up-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="section" aria-labelledby="genres-title">
+            <div class="carousel-head">
+                <div>
+                    <h2 id="genres-title" class="grad">Every Genre, One Calendar</h2>
+                    <p class="section-lede">Tap a genre to see its upcoming nights.</p>
+                </div>
+                <div class="carousel-arrows">
+                    <button type="button" id="genre-prev" aria-label="Previous genres">←</button>
+                    <button type="button" id="genre-next" aria-label="Next genres">→</button>
+                </div>
+            </div>
+            <div class="genre-track" id="genre-track">
+                    <a class="genre-tile g-highlife" data-initial="H" href="./events.html?genre=Highlife">
+                        <strong>Highlife</strong><span data-genre-count="Highlife"></span>
+                    </a>
+                    <a class="genre-tile g-afrobeats" data-initial="A" href="./events.html?genre=Afrobeats">
+                        <strong>Afrobeats</strong><span data-genre-count="Afrobeats"></span>
+                    </a>
+                    <a class="genre-tile g-jazz" data-initial="J" href="./events.html?genre=Jazz">
+                        <strong>Jazz</strong><span data-genre-count="Jazz"></span>
+                    </a>
+                    <a class="genre-tile g-gospel" data-initial="G" href="./events.html?genre=Gospel">
+                        <strong>Gospel</strong><span data-genre-count="Gospel"></span>
+                    </a>
+                    <a class="genre-tile g-reggae" data-initial="R" href="./events.html?genre=Reggae">
+                        <strong>Reggae</strong><span data-genre-count="Reggae"></span>
+                    </a>
+                    <a class="genre-tile g-hiphop" data-initial="H" href="./events.html?genre=Hip-Hop">
+                        <strong>Hip-Hop</strong><span data-genre-count="Hip-Hop"></span>
+                    </a>
+                    </div>
+        </section>
+
+        <section class="section alerts-section" id="alerts" aria-labelledby="alerts-title">
+            <div class="alert-copy">
+                <h2 id="alerts-title" class="grad">Get Event Alerts</h2>
+                <p>
+                    Tell us which genres you love and we will move matching events to the
+                    top whenever you return. Your preferences stay in this browser only.
+                </p>
+                <img class="alert-art" src="./images/alert-notification.svg" width="480" height="360"
+                    alt="A phone showing a new live music event alert next to a ringing bell" loading="lazy">
+            </div>
+
+            <form class="alert-form" id="alert-form" novalidate>
+                <div class="form-field">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="fullName" autocomplete="name" minlength="2" required>
+                    <p class="field-error" id="name-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <p class="field-error" id="email-error" aria-live="polite"></p>
+                </div>
+
+                <fieldset class="genre-fieldset">
+                    <legend>Preferred genres</legend>
+                    <p class="field-hint">Choose at least one genre.</p>
+
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="genre" value="Highlife"> Highlife</label>
+                        <label><input type="checkbox" name="genre" value="Afrobeats"> Afrobeats</label>
+                        <label><input type="checkbox" name="genre" value="Jazz"> Jazz</label>
+                        <label><input type="checkbox" name="genre" value="Gospel"> Gospel</label>
+                        <label><input type="checkbox" name="genre" value="Reggae"> Reggae</label>
+                        <label><input type="checkbox" name="genre" value="Hip-Hop"> Hip-Hop</label>
+                    </div>
+
+                    <p class="field-error" id="genre-error" aria-live="polite"></p>
+                </fieldset>
+
+                <button class="button button-primary" type="submit">Save my alerts</button>
+                <div class="form-confirmation" id="form-confirmation" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p class="footer-brand">Accra Groove Guide</p>
+            <p>One calendar for Accra's live music community.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+            <a href="./index.html">Home</a>
+            <a href="./events.html">Events</a>
+            <a href="./venues.html">Venues</a>
+            <a href="./references.html">References</a>
+        </nav>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/alerts.js"></script>
+</body>
+
+</html>

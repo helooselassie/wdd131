@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse and filter upcoming live Highlife, Afrobeats, Jazz, Gospel, Reggae, and Hip-Hop events in Accra, Ghana.">
+    <title>Events | Accra Groove Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23be1a4f'/%3E%3Ctext x='50' y='70' font-size='64' text-anchor='middle' fill='white'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main navigation">
+            <a class="brand" href="./index.html" aria-label="Accra Groove Guide home">
+                <span class="brand-mark" aria-hidden="true">♪</span>
+                <span>Accra Groove Guide</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                <span class="sr-only">Toggle navigation menu</span>
+                ☰
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="./index.html">Home</a>
+                <a class="active" href="./events.html" aria-current="page">Events</a>
+                <a href="./venues.html">Venues</a>
+                <a href="./references.html">References</a>
+                <a class="nav-cta" href="./index.html#alerts">Get alerts</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero" aria-labelledby="events-title">
+            <div>
+                <p class="eyebrow">The Accra calendar</p>
+                <h1 id="events-title">Upcoming live events</h1>
+                <p>
+                    Filter the sample calendar by genre and venue. Events matching your
+                    saved preferences are pinned to the top.
+                </p>
+            </div>
+
+            <div class="page-hero-card" role="group" aria-label="Calendar highlights">
+                <span>12</span>
+                <p>sample events across Accra venues</p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="filter-title">
+            <div class="preference-panel" id="preference-panel" hidden>
+                <div>
+                    <p class="greeting" id="greeting"></p>
+                    <p class="muted">Your preferred genres are highlighted first.</p>
+                </div>
+                <button class="button button-ghost" id="clear-preferences" type="button">
+                    Clear preferences
+                </button>
+            </div>
+
+            <form class="filters" id="event-filters" aria-labelledby="filter-title">
+                <h2 class="sr-only" id="filter-title">Filter events</h2>
+
+                <div class="filter-field">
+                    <label for="genre-filter">Genre</label>
+                    <select id="genre-filter" name="genre">
+                        <option value="All">All genres</option>
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="venue-filter">Venue</label>
+                    <select id="venue-filter" name="venue">
+                        <option value="All">All venues</option>
+                    </select>
+                </div>
+
+                <button class="button button-primary" type="submit">Show events</button>
+            </form>
+
+            <p class="results-count" id="results-count" aria-live="polite"></p>
+            <div class="card-grid events-grid" id="events-grid" aria-live="polite"></div>
+            <noscript><p class="muted">Turn on JavaScript to see the event calendar.</p></noscript>
+
+            <div class="empty-state" id="empty-state" hidden>
+                <span aria-hidden="true">♫</span>
+                <h2>No events match</h2>
+                <p>Try selecting a different genre or venue combination.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p class="footer-brand">Accra Groove Guide</p>
+            <p>One calendar for Accra's live music community.</p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+            <a href="./index.html">Home</a>
+            <a href="./events.html">Events</a>
+            <a href="./venues.html">Venues</a>
+            <a href="./references.html">References</a>
+        </nav>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/alerts.js"></script>
+</body>
+
+</html>
