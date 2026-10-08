@@ -24,7 +24,7 @@
             </a>
 
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-                <span class="visually-hidden">Toggle navigation menu</span>
+                <span class="assistive-text">Toggle navigation menu</span>
                 ☰
             </button>
 
@@ -66,17 +66,17 @@
                 </button>
             </div>
 
-            <form class="filters" id="event-filters" aria-labelledby="filter-title">
-                <h2 class="visually-hidden" id="filter-title">Filter events</h2>
+            <form class="event-controls" id="event-event-controls" aria-labelledby="filter-title">
+                <h2 class="assistive-text" id="filter-title">Filter events</h2>
 
-                <div class="filter-field">
+                <div class="control-field">
                     <label for="genre-filter">Genre</label>
                     <select id="genre-filter" name="genre">
                         <option value="All">All genres</option>
                     </select>
                 </div>
 
-                <div class="filter-field">
+                <div class="control-field">
                     <label for="venue-filter">Venue</label>
                     <select id="venue-filter" name="venue">
                         <option value="All">All venues</option>
@@ -87,7 +87,7 @@
             </form>
 
             <p class="results-count" id="results-count" aria-live="polite"></p>
-            <div class="card-grid events-grid" id="events-grid" aria-live="polite"></div>
+            <div class="card-list events-list" id="events-list" aria-live="polite"></div>
             <noscript>
                 <p class="muted">Turn on JavaScript to see the event calendar.</p>
             </noscript>

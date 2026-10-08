@@ -79,7 +79,7 @@ function orderEventsByPreference(eventList, preferences) {
 
 // Render the three soonest events on the home page.
 function renderNextUp(preferences) {
-    const grid = document.querySelector("#next-up-grid");
+    const grid = document.querySelector("#next-up-list");
 
     if (!grid) {
         return;
@@ -94,7 +94,7 @@ function renderNextUp(preferences) {
 }
 
 // Fill both filter selects with unique values from the data.
-function populateFilters() {
+function populateevent-controls() {
     const genreFilter = document.querySelector("#genre-filter");
     const venueFilter = document.querySelector("#venue-filter");
 
@@ -120,7 +120,7 @@ function populateFilters() {
     });
 }
 
-// Apply the selected genre and venue filters together.
+// Apply the selected genre and venue event-controls together.
 function getFilteredEvents(genreValue, venueValue) {
     return getSortedEvents(events).filter((event) => {
         const matchesGenre = genreValue === "All" || event.genre === genreValue;
@@ -132,7 +132,7 @@ function getFilteredEvents(genreValue, venueValue) {
 
 // Render the filtered event grid and empty state.
 function renderFilteredEvents(preferences) {
-    const grid = document.querySelector("#events-grid");
+    const grid = document.querySelector("#events-list");
     const emptyState = document.querySelector("#empty-state");
     const resultsCount = document.querySelector("#results-count");
 
@@ -183,7 +183,7 @@ function createVenueCard(venue) {
 
 // Render all venue cards alphabetically.
 function renderVenues() {
-    const grid = document.querySelector("#venue-grid");
+    const grid = document.querySelector("#venue-list");
 
     if (!grid) {
         return;
@@ -222,7 +222,7 @@ function setupMobileNavigation() {
 
 // Render page-specific content after the shared scripts load.
 function renderEventPage(preferences) {
-    populateFilters();
+    populateevent - controls();
 
     const requestedGenre = new URLSearchParams(window.location.search).get("genre");
     const genreSelect = document.querySelector("#genre-filter");
@@ -233,7 +233,7 @@ function renderEventPage(preferences) {
 
     renderFilteredEvents(preferences);
 
-    const filterForm = document.querySelector("#event-filters");
+    const filterForm = document.querySelector("#event-event-controls");
 
     filterForm?.addEventListener("change", () => {
         renderFilteredEvents(readPreferences());

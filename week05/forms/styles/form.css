@@ -178,7 +178,7 @@ footer p {
   margin: .15rem 0;
 }
 
-.visually-hidden {
+.assistive-text {
   position: absolute;
   width: 1px;
   height: 1px;

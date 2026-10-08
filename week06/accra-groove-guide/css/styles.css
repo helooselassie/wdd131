@@ -76,7 +76,7 @@ a:focus-visible {
     outline-offset: 0.2rem;
 }
 
-.visually-hidden {
+.assistive-text {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -402,8 +402,8 @@ a:focus-visible {
 }
 
 /* Event cards with image slot */
-.card-grid,
-.venue-grid {
+.card-list,
+.venue-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.4rem;
@@ -799,7 +799,7 @@ a:focus-visible {
     font-size: 0.88rem;
 }
 
-.filters {
+.event-controls {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -810,11 +810,11 @@ a:focus-visible {
     border-radius: var(--radius);
 }
 
-.filters .button {
+.event-controls .button {
     align-self: end;
 }
 
-.filter-field,
+.control-field,
 .form-field {
     display: flex;
     flex-direction: column;
@@ -914,20 +914,20 @@ input[aria-invalid="true"] {
     border-radius: 0.8rem;
 }
 
-.checkbox-grid {
+.checkbox-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.6rem;
 }
 
-.checkbox-grid label {
+.checkbox-list label {
     display: flex;
     align-items: center;
     gap: 0.6rem;
     font-weight: 400;
 }
 
-.checkbox-grid input {
+.checkbox-list input {
     width: 1.05rem;
     height: 1.05rem;
     accent-color: var(--accent-bright);
@@ -1019,8 +1019,8 @@ input[aria-invalid="true"] {
 
 @media (min-width: 36rem) {
 
-    .filters,
-    .checkbox-grid {
+    .event-controls,
+    .checkbox-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1063,11 +1063,11 @@ input[aria-invalid="true"] {
         height: 30rem;
     }
 
-    .card-grid {
+    .card-list {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .featured-grid .event-card:nth-child(2) {
+    .featured-list .event-card:nth-child(2) {
         transform: translateY(-1rem);
         border-color: rgba(255, 255, 255, 0.2);
     }
@@ -1080,7 +1080,7 @@ input[aria-invalid="true"] {
         grid-template-columns: 0.8fr 1.2fr;
     }
 
-    .venue-grid {
+    .venue-list {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1096,7 +1096,7 @@ input[aria-invalid="true"] {
 }
 
 @media (min-width: 64rem) {
-    .venue-grid {
+    .venue-list {
         grid-template-columns: repeat(3, 1fr);
     }
 }

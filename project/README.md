@@ -8,7 +8,7 @@ with relative paths so it can be hosted on GitHub Pages.
 
 - `index.html` — Hero section, three upcoming events, and a validated event
   alert form.
-- `events.html` — Combined genre and venue filters, result count, and an empty
+- `events.html` — Combined genre and venue event-controls, result count, and an empty
   state.
 - `venues.html` — Responsive cards for Accra venues with address, capacity,
   description, and featured genres.
