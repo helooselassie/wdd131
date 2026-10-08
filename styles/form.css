@@ -6,7 +6,11 @@
   --card: #ffffff;
   --line: #b8c2cf;
 }
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -14,21 +18,63 @@ body {
   color: var(--ink);
   line-height: 1.5;
 }
-header { background: var(--brand); color: #fff; padding: 1rem; text-align: center; }
-h1 { margin: 0; font-size: 1.6rem; }
-main { max-width: 34rem; margin: 1.5rem auto; padding: 0 1rem; }
-form, .confirm {
+
+header {
+  background: var(--brand);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+main {
+  max-width: 34rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+form,
+.confirm {
   background: var(--card);
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--line);
 }
-.field { margin-bottom: 1.25rem; }
-label, legend { display: block; font-weight: 600; margin-bottom: .35rem; }
-.opt { font-weight: 400; color: #4a5565; }
-fieldset { border: 0; padding: 0; margin-inline: 0; }
-legend { padding: 0; }
-select, input[type="date"], input[type="text"], textarea {
+
+.field {
+  margin-bottom: 1.25rem;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .35rem;
+}
+
+.opt {
+  font-weight: 400;
+  color: #4a5565;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin-inline: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
   width: 100%;
   padding: .6rem;
   font: inherit;
@@ -36,17 +82,44 @@ select, input[type="date"], input[type="text"], textarea {
   border-radius: 4px;
   background: #fff;
 }
-select:focus, input:focus, textarea:focus {
+
+select:focus,
+input:focus,
+textarea:focus {
   outline: 3px solid var(--accent);
   outline-offset: 1px;
 }
-.check { display: flex; align-items: center; gap: .5rem; margin-bottom: .4rem; }
-.check label { margin: 0; font-weight: 400; }
-.check input { width: 1.1rem; height: 1.1rem; }
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .4rem;
+}
+
+.check label {
+  margin: 0;
+  font-weight: 400;
+}
+
+.check input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
 
 /* Star rating: fills stars up to the selected one */
-.stars { display: inline-flex; flex-direction: row-reverse; }
-.stars input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.stars input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
 .stars label {
   font-size: 2.4rem;
   line-height: 1;
@@ -55,10 +128,16 @@ select:focus, input:focus, textarea:focus {
   color: #8a94a3;
   cursor: pointer;
 }
-.stars input:checked ~ label,
+
+.stars input:checked~label,
 .stars label:hover,
-.stars label:hover ~ label { color: var(--accent); }
-.stars input:focus-visible + label { outline: 3px solid var(--brand); }
+.stars label:hover~label {
+  color: var(--accent);
+}
+
+.stars input:focus-visible+label {
+  outline: 3px solid var(--brand);
+}
 
 input[type="submit"] {
   width: 100%;
@@ -71,20 +150,50 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
-input[type="submit"]:hover { background: #082c52; }
 
-.confirm { text-align: center; }
-.count { font-size: 1.2rem; }
-a { color: var(--brand); }
+input[type="submit"]:hover {
+  background: #082c52;
+}
 
-footer { text-align: center; padding: 1rem; font-size: .9rem; color: #3a4452; }
-footer p { margin: .15rem 0; }
-.sr-only {
-  position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap;
+.confirm {
+  text-align: center;
+}
+
+.count {
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--brand);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: .9rem;
+  color: #3a4452;
+}
+
+footer p {
+  margin: .15rem 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 @media (min-width: 700px) {
-  main { margin-top: 2.5rem; }
-  form, .confirm { padding: 2rem; }
+  main {
+    margin-top: 2.5rem;
+  }
+
+  form,
+  .confirm {
+    padding: 2rem;
+  }
 }
