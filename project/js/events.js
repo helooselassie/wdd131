@@ -94,7 +94,7 @@ function renderNextUp(preferences) {
 }
 
 // Fill both filter selects with unique values from the data.
-function populateevent-controls() {
+function populateFilters() {
     const genreFilter = document.querySelector("#genre-filter");
     const venueFilter = document.querySelector("#venue-filter");
 
@@ -222,7 +222,7 @@ function setupMobileNavigation() {
 
 // Render page-specific content after the shared scripts load.
 function renderEventPage(preferences) {
-    populateevent - controls();
+    populateFilters();
 
     const requestedGenre = new URLSearchParams(window.location.search).get("genre");
     const genreSelect = document.querySelector("#genre-filter");
