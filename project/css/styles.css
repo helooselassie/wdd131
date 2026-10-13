@@ -91,9 +91,7 @@ a:focus-visible {
     padding-bottom: 0.12em;
     /* stops gradient text clipping descenders */
     background: linear-gradient(180deg, #fff 35%, #8b93a5);
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
     color: transparent;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -255,7 +253,6 @@ a:focus-visible {
 .hero-visual {
     overflow: hidden;
     border-radius: var(--radius);
-    -webkit-mask-image: radial-gradient(closest-side, #000 60%, transparent);
     mask-image: radial-gradient(closest-side, #000 60%, transparent);
 }
 
@@ -668,10 +665,6 @@ a:focus-visible {
     scrollbar-width: none;
 }
 
-.genre-track::-webkit-scrollbar {
-    display: none;
-}
-
 .genre-tile {
     position: relative;
     display: flex;
@@ -794,8 +787,8 @@ a:focus-visible {
     color: var(--accent-bright);
 }
 
-.page-hero-card p {
-    margin: 0.4rem 0 0 !important;
+.page-hero .page-hero-card p {
+    margin: 0.4rem 0 0;
     font-size: 0.88rem;
 }
 
