@@ -120,7 +120,7 @@ function populateFilters() {
     });
 }
 
-// Apply the selected genre and venue event-controls together.
+// Apply the selected genre and venue filters together.
 function getFilteredEvents(genreValue, venueValue) {
     return getSortedEvents(events).filter((event) => {
         const matchesGenre = genreValue === "All" || event.genre === genreValue;
@@ -233,7 +233,7 @@ function renderEventPage(preferences) {
 
     renderFilteredEvents(preferences);
 
-    const filterForm = document.querySelector("#event-event-controls");
+    const filterForm = document.querySelector(".event-controls");
 
     filterForm?.addEventListener("change", () => {
         renderFilteredEvents(readPreferences());
