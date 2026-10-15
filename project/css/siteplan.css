@@ -14,10 +14,10 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  color: var(--ink);
+  background: var(--cream);
 }
 
 header {

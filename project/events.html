@@ -3,121 +3,78 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Browse and filter upcoming live Highlife, Afrobeats, Jazz, Gospel, Reggae, and Hip-Hop events in Accra, Ghana.">
-    <meta name="author" content="Selassie Kwabla Heloo">
-    <title>Events | Accra Groove Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap">
-    <link rel="icon"
-        href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%23c9f31d'/%3E%3Ctext%20x='50'%20y='70'%20font-size='64'%20text-anchor='middle'%20fill='%23080808'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Every live music event in Accra. Filter by genre and venue.">
+    <title>All Events | Accra Groove Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/events.js" defer></script>
+    <script src="js/alerts.js" defer></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header class="site-header">
-        <nav class="site-nav" aria-label="Main navigation">
-            <a class="brand" href="index.html" aria-label="Accra Groove Guide home">
-                <span class="brand-mark" aria-hidden="true">♪</span>
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <svg class="logo" viewBox="0 0 48 48" role="img" aria-label="Accra Groove Guide logo: five sound bars">
+                    <rect width="48" height="48" rx="10" fill="#e8b130" />
+                    <rect x="8" y="22" width="5" height="18" rx="2.5" fill="#0f3d2e" />
+                    <rect x="16" y="12" width="5" height="28" rx="2.5" fill="#0f3d2e" />
+                    <rect x="24" y="18" width="5" height="22" rx="2.5" fill="#c8352b" />
+                    <rect x="32" y="8" width="5" height="32" rx="2.5" fill="#0f3d2e" />
+                    <rect x="40" y="24" width="3" height="16" rx="1.5" fill="#0f3d2e" />
+                </svg>
                 <span>Accra Groove Guide</span>
             </a>
-
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-                <span class="assistive-text">Toggle navigation menu</span>
-                ☰
-            </button>
-
-            <div class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a class="active" href="events.html" aria-current="page">Events</a>
-                <a href="venues.html">Venues</a>
-                <a href="references.html">References</a>
-                <a class="nav-cta" href="index.html#alerts">Get alerts</a>
-            </div>
-        </nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html" aria-current="page">Events</a></li>
+                    <li><a href="venues.html">Venues</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="page-hero" aria-labelledby="events-title">
-            <div>
-                <p class="eyebrow">The Accra calendar</p>
-                <h1 id="events-title">Upcoming live events</h1>
-                <p>
-                    Filter the sample calendar by genre and venue. Events matching your
-                    saved preferences are pinned to the top.
-                </p>
-            </div>
-
-            <div class="page-hero-card" role="group" aria-label="Calendar highlights">
-                <span>12</span>
-                <p>sample events across Accra venues</p>
+    <main id="main">
+        <section class="page-title">
+            <div class="container">
+                <h1>All Events</h1>
+                <p class="lead">Filter by genre and venue to find your next night out.</p>
             </div>
         </section>
 
-        <section class="section" aria-labelledby="filter-title">
-            <div class="preference-panel" id="preference-panel" hidden>
-                <div>
-                    <p class="greeting" id="greeting"></p>
-                    <p class="muted">Your preferred genres are highlighted first.</p>
-                </div>
-                <button class="button button-ghost" id="clear-preferences" type="button">
-                    Clear preferences
-                </button>
-            </div>
+        <div class="container">
+            <div id="personal-bar" class="personal-bar" role="status" hidden></div>
 
-            <form class="event-controls" id="event-event-controls" aria-labelledby="filter-title">
-                <h2 class="assistive-text" id="filter-title">Filter events</h2>
-
-                <div class="control-field">
+            <form class="filters" aria-label="Filter events">
+                <div class="field">
                     <label for="genre-filter">Genre</label>
-                    <select id="genre-filter" name="genre">
-                        <option value="All">All genres</option>
-                    </select>
+                    <select id="genre-filter" name="genre"></select>
                 </div>
-
-                <div class="control-field">
+                <div class="field">
                     <label for="venue-filter">Venue</label>
-                    <select id="venue-filter" name="venue">
-                        <option value="All">All venues</option>
-                    </select>
+                    <select id="venue-filter" name="venue"></select>
                 </div>
-
-                <button class="button button-primary" type="submit">Show events</button>
             </form>
 
-            <p class="results-count" id="results-count" aria-live="polite"></p>
-            <div class="card-list events-list" id="events-list" aria-live="polite"></div>
-            <noscript>
-                <p class="muted">Turn on JavaScript to see the event calendar.</p>
-            </noscript>
-
-            <div class="empty-state" id="empty-state" hidden>
-                <span aria-hidden="true">♫</span>
-                <h2>No events match</h2>
-                <p>Try selecting a different genre or venue combination.</p>
-            </div>
-        </section>
+            <h2 class="list-heading">Upcoming events</h2>
+            <p id="results-count" class="results-count" role="status" aria-live="polite"></p>
+            <div id="events-list" class="card-grid"></div>
+            <p id="no-events" class="no-events" hidden>No events match your filters. Try choosing "All" for genre or
+                venue.</p>
+        </div>
     </main>
 
     <footer class="site-footer">
-        <div>
-            <p class="footer-brand">Accra Groove Guide</p>
-            <p>One calendar for Accra's live music community.</p>
+        <div class="container">
+            <p>&copy; 2026 Accra Groove Guide. Sample event data for a course project.</p>
+            <p><a href="events.html">Events</a> &middot; <a href="venues.html">Venues</a> &middot; <a
+                    href="references.html">References</a></p>
         </div>
-
-        <nav aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="venues.html">Venues</a>
-            <a href="references.html">References</a>
-        </nav>
     </footer>
-
-    <script src="scripts/data.js"></script>
-    <script src="scripts/events.js"></script>
-    <script src="scripts/alerts.js"></script>
 </body>
 
 </html>
